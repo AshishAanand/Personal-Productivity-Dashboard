@@ -14,14 +14,14 @@ def save_to_readme():
     # secondary_tasks = entry_secondary.get("1.0", tk.END).strip()
     # notes = entry_notes.get("1.0", tk.END).strip()
     # reflection = entry_reflection.get("1.0", tk.END).strip()
-    priorities1 = entryPriorities1.get("1.0", END).strip()
-    priorities2 = entryPriorities2.get("1.0", END).strip()
-    priorities3 = entryPriorities3.get("1.0", END).strip()
+    priorities1 = entryPriorities1.get().strip()
+    priorities2 = entryPriorities2.get().strip()
+    priorities3 = entryPriorities3.get().strip()
 
-    secondaryTask1 = entrySecondaryTasks1.get("1.0", END).strip()
-    secondaryTask2 = entrySecondaryTasks2.get("1.0", END).strip()
+    secondaryTask1 = entrySecondaryTasks1.get().strip()
+    secondaryTask2 = entrySecondaryTasks2.get().strip()
 
-    notes = entryNotes.get("1.0", END).strip()
+    notes = entryNotes.get().strip()
 
     if priorities1 and priorities2 and priorities3 and secondaryTask1 and secondaryTask2 and notes != "":
         # Convert data into a well-formatted Markdown
@@ -131,6 +131,7 @@ daily_reminder_frame.pack(pady=20, padx=20, fill="x")
 Label(daily_reminder_frame, text=" 📝 Daily Notes or Reminder for Tomorrow", font=("Arial", 14, "bold"), bg="#2e2e2e",fg="white").pack()
 # Adding entry fields for the daily notes with some padding and modern styling
 entryNotes = ttk.Entry(daily_reminder_frame,  width=100, style="TEntry")
+entryNotes.pack(pady=5, fill="x")
 
 # # Creating a frame for handling day reflections
 # day_reflection_frame = Frame(root, bg="#2e2e2e")
