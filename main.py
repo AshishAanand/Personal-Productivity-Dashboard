@@ -26,21 +26,21 @@ def save_to_readme():
     if priorities1 and priorities2 and priorities3 and secondaryTask1 and secondaryTask2 and notes != "":
         # Convert data into a well-formatted Markdown
         markdown_content = f"""
-    # 📅 Daily Planner - {date}
+# 📅 Date - {date}
 
-    ## 🌟 Top 3 Priorities
-    ### 1. {priorities1}
-    ### 2. {priorities2}
-    ### 3. {priorities3}
+## 🌟 Top 3 Priorities
+### 1. {priorities1}
+### 2. {priorities2}
+### 3. {priorities3}
 
-    ## 📌 Secondary Tasks
-    ### 1. {secondaryTask1}
-    ### 2. {secondaryTask2}
+## 📌 Secondary Tasks
+### 1. {secondaryTask1}
+### 2. {secondaryTask2}
 
-    ## 📝 Notes / Reminders for Tomorrow
-    {notes}
+## 📝 Notes / Reminders for Tomorrow
+### {notes}
 
-    ---
+---
 
     """
         try:
